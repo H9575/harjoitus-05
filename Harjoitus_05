@@ -1,0 +1,29 @@
+/*	Jani Kähkönen/H9575
+Harjoitus_5	19.9.2014	*/
+
+#include <iostream>
+using namespace std;
+
+class numero
+{
+	int _n1, _n2;
+public:
+	void vertaa()
+	{
+		if (_n1 != _n2){ cout << "Bongo! " << _n1 << " = " << _n2 << "\n"; }
+		else{ cout << "Bingo! " << _n1 << " = " << _n2 << "\n"; }
+	}
+	void setNumero(int n1, int n2){ _n1 = n1; _n2 = n2; }
+	numero() :_n1(0), _n2(0){}
+	~numero(){}
+};
+
+int main()
+{
+	numero num;
+	int n1, n2;
+	cout << "Syota numero 1(2):"; cin >> n1;
+	cout << "Syota numero 2(2):"; cin >> n2;
+	num.setNumero(n1, n2);
+	num.vertaa();
+}
